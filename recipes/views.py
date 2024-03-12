@@ -1,16 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+
 # Create your views here.
 
 def home_view(request):
     ...
-    return HttpResponse('HOME 2')
+    return render(request, 'recipes/home.html', {
+        'name':'Fernando'
+    })
 
-def sobre_view(request):
-    ...
-    return HttpResponse('SOBRE')
-
-def contato_view(request):
-    ...
-    return HttpResponse('CONTATO')
+# Status de resposta HTTP : https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status#respostas_bem-sucedidas

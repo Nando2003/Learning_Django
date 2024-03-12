@@ -23,8 +23,6 @@ from django.urls import path, include
     return HttpResponse('HOME')"""
 # return HTTP Response
 
-# Status de resposta HTTP : https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status#respostas_bem-sucedidas
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('recipes.urls')),
